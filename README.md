@@ -1,4 +1,4 @@
-# grok-skills
+# grok-bot-skills
 
 A **shareable skills hub**: browse what is available, reuse ideas freely, and contribute original skills others can use under MIT.
 
