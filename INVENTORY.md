@@ -89,24 +89,19 @@ Mentions of the same words as ordinary language, or as nicknames for routines (f
 ```
 .
 ├── README.md
+├── CONTRIBUTING.md
+├── LICENSE                 ← MIT for repository-original material
 ├── INVENTORY.md
 ├── RECOMMENDATIONS.md
 ├── SOURCES.md
 ├── LICENSING.md
 ├── PROVENANCE.md
 ├── catalogs/
-│   ├── README.md
-│   ├── manifest.json
-│   ├── recommendations.json
-│   ├── managed-skills.{md,json}
-│   ├── plugin-skills.{md,json}
-│   ├── installed-plugins.{md,json}
-│   └── unregistered-plugin-skill-files.json
 ├── recommendations/
-│   ├── README.md
-│   └── 01–06 briefs
+├── templates/SKILL.template.md
 ├── custom-skills/
-│   └── README.md
-└── scripts/
-    └── validate_catalog.py
+│   ├── README.md
+│   └── _examples/          ← labelled examples only
+├── .github/                ← issue forms + PR template
+└── scripts/validate_catalog.py
 ```

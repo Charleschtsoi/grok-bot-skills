@@ -1,9 +1,33 @@
 # custom-skills
 
-User-authored, reusable Grok Bot skills will be published here after sanitisation (no secrets, no personal data, no private paths).
+Home for **original**, reusable skill recipes contributed to this hub.
 
-At the time of the first inventory, the shared workflows library contained **no** custom skills, so there is nothing to place in this folder yet.
+## Current state
 
-Proposed skills from the research pass are documented under [`../recommendations/`](../recommendations/README.md) and remain **`PROPOSED` / `NOT_INSTALLED`** until separately authored and approved. Those briefs are not skill installs.
+| Kind | Count |
+|---|---:|
+| Installable / published original skills | **0** |
+| Contributor example (not functioning, not installed) | 1 — [`_examples/hello-skill-review/`](_examples/hello-skill-review/SKILL.md) |
 
-This folder is a placeholder for future custom skills only. Managed and plugin skills are catalogued under [`../catalogs/`](../catalogs/manifest.json) and are **not** vendored here.
+At inventory time the shared live library also had no custom skills. Proposed research briefs under [`../recommendations/`](../recommendations/README.md) remain `PROPOSED` / `NOT_INSTALLED` until someone authors a real recipe here.
+
+## Layout
+
+```
+custom-skills/
+  README.md                 ← this file
+  _examples/                ← labelled examples only (not live skills)
+    hello-skill-review/
+  <your-skill-name>/        ← future contributions
+    SKILL.md
+    fixtures/               ← fictional acceptance fixtures
+    references/             ← optional relative helpers
+```
+
+Copy [`../templates/SKILL.template.md`](../templates/SKILL.template.md) when starting a contribution. Follow [`../CONTRIBUTING.md`](../CONTRIBUTING.md).
+
+## Important
+
+- Managed and plugin skills are catalogued under [`../catalogs/`](../catalogs/README.md) and are **not** vendored here.
+- Putting a skill in this folder documents it for reuse under MIT; it does **not** by itself install it into an agent.
+- Review and verify locally before trusting any contributed skill.

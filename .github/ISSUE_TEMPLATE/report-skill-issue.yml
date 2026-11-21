@@ -1,0 +1,51 @@
+name: Report a skill issue
+description: Report a problem with a catalogue entry, recommendation brief, example, or contributed skill.
+title: "Skill issue: "
+labels: ["skill-issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for accuracy, safety, licensing, or clarity problems.
+        Do **not** paste secrets or personal data into the issue.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where is the issue?
+      options:
+        - Catalogue (managed / plugin listing)
+        - Recommendation brief
+        - Example or template
+        - Contributed custom skill
+        - Docs / licensing
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: skill-or-path
+    attributes:
+      label: Skill name or file path
+      description: For example catalogs/managed-skills.md or custom-skills/my-skill/SKILL.md
+      placeholder: path or name
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What is wrong?
+      description: Facts only. Link sources if you claim a licence or upstream mismatch.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should change?
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: This report does not include secrets, credentials, or personal data
+          required: true

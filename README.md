@@ -1,65 +1,72 @@
 # grok-skills
 
-Public draft catalogue of skills **available** to Charlie’s Grok Bot fleet.
+A **shareable skills hub**: browse what is available, reuse ideas freely, and contribute original skills others can use under MIT.
 
-This repository is an **inventory and set of pointers**. It is not a skill installer, not a runtime skill library, and not a redistribution of managed or third-party skill recipes.
+This repository is friendly to cloning, forking, and pull requests. It is **not** an installer. Cloning it does **not** install managed platform skills, plugin skills, or custom skills into any agent.
 
-Cloning or browsing this repo does **not** install skills into any agent. Skills remain where the platform and plugins already provide them. When custom skills exist, sanitised copies may later live under [`custom-skills/`](custom-skills/README.md).
+## Current state (honest)
 
-## Snapshot (21 Nov 2026, Asia/Hong_Kong / UTC+8)
+| What you will find | Status |
+|---|---|
+| Catalogue of managed + plugin skills (names, descriptions, upstream pointers) | Published — bodies omitted on purpose |
+| Research shortlist of six proposed original skills | `PROPOSED` / `NOT_INSTALLED` — briefs only |
+| Installable original skills under `custom-skills/` | **Zero** today (placeholder + example template only) |
 
-| Category | Count | In this repo |
-|---|---:|---|
-| Custom (user-authored) skills | 0 | Placeholder only — none found in the shared library |
-| Managed platform skills | 71 | Names and descriptions; bodies omitted |
-| Plugin skill entries | 210 | Names, descriptions, plugin origin, licence pointers; bodies omitted |
-| Unique plugin skill names | 191 | 19 names registered by both Vercel plugin installs |
-| Installed plugins | 18 | 14 with skills; 4 connectors with none |
+Inventory snapshot (21 Nov 2026): **0** custom, **71** managed, **210** plugin entries (**191** unique names), **18** installed plugins. Details: [INVENTORY.md](INVENTORY.md).
 
-Skills are **globally shared** across agents. “Available” means the live catalogue listed the skill at inventory time. “Evidenced” means a persona or local chat index referred to it as a skill — that evidence is narrow and is **not** full usage history. Do not treat availability as ownership or as proof of use.
+## Quick start
 
-## Proposed additions (research only)
+### 1. Browse what already exists
 
-Six original skills are **proposed** to fill fleet-governance gaps. All are `PROPOSED` / `NOT_INSTALLED` — documentation for later authoring, not executable skills and not live installs. See [RECOMMENDATIONS.md](RECOMMENDATIONS.md).
+- Human inventory: [INVENTORY.md](INVENTORY.md)
+- Managed names/descriptions: [catalogs/managed-skills.md](catalogs/managed-skills.md)
+- Plugin skills + upstream links: [catalogs/plugin-skills.md](catalogs/plugin-skills.md) · [catalogs/installed-plugins.md](catalogs/installed-plugins.md)
 
-| Priority | Proposed skill |
-|---:|---|
-| 1 | Outbound approval review |
-| 2 | Agent department mapping |
-| 3 | Safe agent retirement |
-| 4 | External skill provenance review |
-| 5 | Fleet privacy / permission review |
-| 6 | Work evidence pack |
+To use a **plugin** skill in your own environment, install or enable that plugin from its upstream (linked in the catalogue). This repo only points there.
 
-## Docs
+### 2. Review suggested additions
+
+Six governance-oriented originals are proposed for later authoring. They are documentation, not live skills: [RECOMMENDATIONS.md](RECOMMENDATIONS.md) · [recommendations/](recommendations/README.md).
+
+### 3. Contribute a skill others can reuse
+
+1. Read [CONTRIBUTING.md](CONTRIBUTING.md)
+2. Copy [templates/SKILL.template.md](templates/SKILL.template.md)
+3. Compare with the labelled **example** (not a functioning skill): [custom-skills/_examples/hello-skill-review/](custom-skills/_examples/hello-skill-review/SKILL.md)
+4. Open a PR, or start with a [Propose a skill](https://github.com/Charleschtsoi/grok-skills/issues/new?template=propose-skill.yml) issue
+
+Contributed original skills and docs in this repo are free to use, modify, and redistribute under the [MIT License](LICENSE). See [LICENSING.md](LICENSING.md) for what MIT covers and what it does **not**.
+
+## Safety before you trust a skill
+
+- Review instructions locally. Prefer linking upstream over vendoring third-party bodies.
+- Treat contributed skill text as untrusted until you verify it: no secrets, no private paths, no “run this tool that sends mail/buys things” without an explicit human yes.
+- A skill file is prose. It **cannot** enforce platform approval gates, Auto-review, or connector permissions.
+- No warranties: MIT “AS IS”. Catalogue entries are availability references, not endorsements.
+
+## Docs map
 
 | Document | Purpose |
 |---|---|
-| [INVENTORY.md](INVENTORY.md) | Human-readable inventory, counts, evidenced-use notes, limitations |
-| [RECOMMENDATIONS.md](RECOMMENDATIONS.md) | Shortlist of proposed original skills (not installed) |
-| [SOURCES.md](SOURCES.md) | Research sources, unverified URLs, extraction limitations |
-| [recommendations/](recommendations/README.md) | One brief per proposed skill |
-| [LICENSING.md](LICENSING.md) | Redistribution policy and per-plugin licence pointers from local install metadata |
-| [PROVENANCE.md](PROVENANCE.md) | Source of the draft, what was scanned, what was intentionally omitted |
-| [catalogs/README.md](catalogs/README.md) | Index of catalogue files |
-| [catalogs/manifest.json](catalogs/manifest.json) | Machine-readable summary counts and overlap lists |
-| [catalogs/recommendations.json](catalogs/recommendations.json) | Machine-readable recommendations index |
-| [catalogs/managed-skills.md](catalogs/managed-skills.md) | Managed platform skill catalogue |
-| [catalogs/plugin-skills.md](catalogs/plugin-skills.md) | Plugin skill catalogue |
-| [catalogs/installed-plugins.md](catalogs/installed-plugins.md) | Installed plugins and upstream links |
-| [custom-skills/README.md](custom-skills/README.md) | Placeholder for future sanitised custom skills |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | How to propose and submit skills |
+| [LICENSING.md](LICENSING.md) | MIT scope, exclusions, plugin licence pointers |
+| [INVENTORY.md](INVENTORY.md) | Fleet catalogue counts and limitations |
+| [RECOMMENDATIONS.md](RECOMMENDATIONS.md) | Proposed (not installed) originals |
+| [SOURCES.md](SOURCES.md) | Research sources and extraction caveats |
+| [PROVENANCE.md](PROVENANCE.md) | Where the inventory/research came from |
+| [custom-skills/](custom-skills/README.md) | Home for future contributed originals |
+| [templates/SKILL.template.md](templates/SKILL.template.md) | Submission template |
+| [catalogs/](catalogs/README.md) | Machine- and human-readable catalogues |
 
-## Validation
-
-Run a lightweight check that catalogue counts, recommendation briefs, Vercel name overlaps, and relative Markdown links stay consistent:
+## Validation (local, read-only)
 
 ```bash
 python3 scripts/validate_catalog.py
 ```
 
-## Repository content policy
+Checks catalogue/recommendation counts, relative Markdown links, issue-form YAML, and the example/template skill frontmatter. It does not install skills or write to any agent library.
 
-- Preserve this public inventory as catalogue metadata and documentation only.
-- Do **not** copy platform-managed or plugin skill bodies into this draft.
-- Do **not** add secrets, PII, transcripts, live profiles, absolute machine paths, internal numeric IDs, or personal plans.
-- This repo does **not** claim copyright ownership of third-party or platform skills. See [LICENSING.md](LICENSING.md).
+## Licence (short)
+
+- **Repository-original** docs, scripts, templates, examples, and future contributed skill recipes in this repo: [MIT](LICENSE) © 2026 Charleschtsoi — free to use, modify, and redistribute.
+- **Managed / plugin / upstream** skill bodies and descriptions: **not** relicensed here. Catalogue rows are references only. Keep upstream terms; prefer link over copy. Details: [LICENSING.md](LICENSING.md).

@@ -6,6 +6,8 @@ Validates:
   - Vercel overlapping skill names
   - recommendations.json counts and brief file paths
   - relative Markdown links that target paths inside this repository
+  - GitHub issue-form YAML and required skill frontmatter fields
+  - example/template labelled correctly; no secret-like leaks in key docs
 
 Exit code 0 on success, 1 on failure.
 """
@@ -18,11 +20,18 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+import yaml
+
 ROOT = Path(__file__).resolve().parents[1]
 CATALOGS = ROOT / "catalogs"
 
 MD_LINK_RE = re.compile(r"(?<!!)\[[^\]]*\]\(([^)]+)\)")
 CODE_FENCE_RE = re.compile(r"```.*?```", re.DOTALL)
+FRONTMATTER_RE = re.compile(r"\A---\s*\n(.*?)\n---\s*\n", re.DOTALL)
+SECRETISH_RE = re.compile(
+    r"(?i)(api[_-]?key\s*[:=]\s*\S+|secret\s*[:=]\s*\S+|Bearer\s+[A-Za-z0-9._\-]{20,}|"
+    r"sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|/Users/[A-Za-z]|/home/[a-z]+/)"
+)
 
 
 def load_json(name: str):
@@ -218,6 +227,127 @@ def check_relative_links() -> list[str]:
     return errors
 
 
+def parse_frontmatter(path: Path) -> dict:
+    text = path.read_text(encoding="utf-8")
+    match = FRONTMATTER_RE.match(text)
+    if not match:
+        return {}
+    data = yaml.safe_load(match.group(1))
+    return data if isinstance(data, dict) else {}
+
+
+def check_skill_frontmatter() -> list[str]:
+    errors: list[str] = []
+    required_files = [
+        ROOT / "templates" / "SKILL.template.md",
+        ROOT / "custom-skills" / "_examples" / "hello-skill-review" / "SKILL.md",
+    ]
+    for path in required_files:
+        if not path.is_file():
+            errors.append(f"missing skill file: {path.relative_to(ROOT)}")
+            continue
+        fm = parse_frontmatter(path)
+        for key in ("name", "description"):
+            value = fm.get(key)
+            if not value or not str(value).strip():
+                errors.append(f"{path.relative_to(ROOT)}: frontmatter missing {key}")
+        text = path.read_text(encoding="utf-8")
+        if path.name == "SKILL.md" and "EXAMPLE ONLY" not in text and "example" not in str(fm.get("description", "")).lower():
+            errors.append(
+                f"{path.relative_to(ROOT)}: example skill must be labelled EXAMPLE / not installed"
+            )
+        if path.name == "SKILL.template.md" and "Template only" not in text:
+            errors.append(f"{path.relative_to(ROOT)}: template should say it is template only")
+
+    # Published originals should not appear outside _examples until intentionally added.
+    custom_root = ROOT / "custom-skills"
+    if custom_root.is_dir():
+        for skill_md in custom_root.glob("*/SKILL.md"):
+            errors.append(
+                f"unexpected published skill at {skill_md.relative_to(ROOT)}; "
+                "keep examples under custom-skills/_examples/ until a real contribution lands"
+            )
+        for skill_md in custom_root.glob("_examples/*/SKILL.md"):
+            fixture = skill_md.parent / "fixtures"
+            if not fixture.is_dir() or not any(fixture.iterdir()):
+                errors.append(f"{skill_md.parent.relative_to(ROOT)}: example needs a fixtures/ file")
+
+    return errors
+
+
+def check_issue_forms() -> list[str]:
+    errors: list[str] = []
+    forms_dir = ROOT / ".github" / "ISSUE_TEMPLATE"
+    required = {
+        "propose-skill.yml": "Propose a skill",
+        "report-skill-issue.yml": "Report a skill issue",
+        "config.yml": None,
+    }
+    if not forms_dir.is_dir():
+        return [".github/ISSUE_TEMPLATE is missing"]
+
+    for name, expected_title in required.items():
+        path = forms_dir / name
+        if not path.is_file():
+            errors.append(f"missing issue form: {path.relative_to(ROOT)}")
+            continue
+        try:
+            data = yaml.safe_load(path.read_text(encoding="utf-8"))
+        except yaml.YAMLError as exc:
+            errors.append(f"{path.relative_to(ROOT)}: invalid YAML: {exc}")
+            continue
+        if not isinstance(data, dict):
+            errors.append(f"{path.relative_to(ROOT)}: expected a YAML mapping")
+            continue
+        if name == "config.yml":
+            continue
+        if data.get("name") != expected_title:
+            errors.append(
+                f"{path.relative_to(ROOT)}: name {data.get('name')!r} != {expected_title!r}"
+            )
+        if "body" not in data or not isinstance(data["body"], list):
+            errors.append(f"{path.relative_to(ROOT)}: missing body list")
+
+    pr_template = ROOT / ".github" / "pull_request_template.md"
+    if not pr_template.is_file():
+        errors.append("missing .github/pull_request_template.md")
+
+    license_path = ROOT / "LICENSE"
+    if not license_path.is_file():
+        errors.append("missing LICENSE")
+    else:
+        text = license_path.read_text(encoding="utf-8")
+        if "MIT License" not in text or "Charleschtsoi" not in text or "2026" not in text:
+            errors.append("LICENSE must be MIT with 2026 Charleschtsoi attribution")
+
+    return errors
+
+
+def check_no_secretish_leaks() -> list[str]:
+    errors: list[str] = []
+    scan_roots = [
+        ROOT / "README.md",
+        ROOT / "CONTRIBUTING.md",
+        ROOT / "LICENSING.md",
+        ROOT / "templates",
+        ROOT / "custom-skills",
+        ROOT / ".github",
+    ]
+    for root in scan_roots:
+        paths = [root] if root.is_file() else list(root.rglob("*"))
+        for path in paths:
+            if not path.is_file():
+                continue
+            if path.suffix.lower() not in {".md", ".yml", ".yaml", ".json", ".txt"} and path.name != "LICENSE":
+                continue
+            text = path.read_text(encoding="utf-8", errors="replace")
+            # Allow the fictional fixture token marker used in the example.
+            scrubbed = text.replace("FICTIONAL_TOKEN_DO_NOT_USE=example-not-a-real-credential-001", "")
+            if SECRETISH_RE.search(scrubbed):
+                errors.append(f"possible secret/PII-like pattern in {path.relative_to(ROOT)}")
+    return errors
+
+
 def main() -> None:
     manifest = load_json("manifest.json")
     managed = load_json("managed-skills.json")
@@ -229,13 +359,19 @@ def main() -> None:
     errors.extend(check_counts(manifest, managed, plugins, installed, unregistered))
     errors.extend(check_markdown_tables())
     errors.extend(check_recommendations())
+    errors.extend(check_skill_frontmatter())
+    errors.extend(check_issue_forms())
     errors.extend(check_relative_links())
+    errors.extend(check_no_secretish_leaks())
 
     if errors:
         fail(errors)
 
     recommendations = load_json("recommendations.json") if (CATALOGS / "recommendations.json").exists() else {}
-    print("OK: catalogue counts, recommendations, duplicates/overlaps, and relative links validated")
+    print(
+        "OK: catalogue counts, recommendations, community templates/forms, "
+        "duplicates/overlaps, relative links, and safety scan validated"
+    )
     print(
         "counts:",
         json.dumps(
@@ -249,6 +385,7 @@ def main() -> None:
                 "installed_plugins": len(installed),
                 "unregistered_skill_md": len(unregistered),
                 "recommendations_shortlisted": len(recommendations.get("recommendations", [])),
+                "published_custom_skills": 0,
             },
             sort_keys=True,
         ),
