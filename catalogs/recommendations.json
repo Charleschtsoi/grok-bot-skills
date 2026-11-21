@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "generated_at": "21 Nov 2026, Asia/Hong_Kong (UTC+8)",
+  "intended_repository": "https://github.com/Charleschtsoi/grok-skills",
+  "package_type": "public-safe skill recommendations (research only; no live installs, no vendored third-party bodies)",
+  "source_archive_sha256": "999df77985e4763c1b7fa0391e824e49c65c3cd7fdbabee774efcd580421b901",
+  "status_of_all_items": [
+    "PROPOSED",
+    "NOT_INSTALLED"
+  ],
+  "counts": {
+    "shortlisted": 6,
+    "original_to_author": 6,
+    "install_or_reuse_external_skill": 0
+  },
+  "non_goals": [
+    "Do not auto-install or write into the live skill library",
+    "Do not create monitors or routines as part of accepting these recommendations",
+    "Do not copy licensed third-party skill or checklist bodies",
+    "Do not claim a skill can enforce app-level approval gates",
+    "Do not choose a blanket copyright licence for third-party material"
+  ],
+  "recommendations": [
+    {
+      "priority": 1,
+      "id": "outbound-approval-review",
+      "proposed_name": "outbound-approval-review",
+      "title": "Outbound approval review and regression checks",
+      "kind": "original-to-author",
+      "status": "PROPOSED",
+      "install_state": "NOT_INSTALLED",
+      "effort": "Medium",
+      "file": "recommendations/01-outbound-approval-review.md",
+      "gap": "Existing send-time skills (send-on-behalf, agent-email, purchases, in-chat-forms) do not provide post-event review or regression checks. A skill cannot enforce app-level approval gates."
+    },
+    {
+      "priority": 2,
+      "id": "agent-department-mapping",
+      "proposed_name": "agent-department-mapping",
+      "title": "Agent department mapping and overlap review",
+      "kind": "original-to-author",
+      "status": "PROPOSED",
+      "install_state": "NOT_INSTALLED",
+      "effort": "Medium",
+      "file": "recommendations/02-agent-department-mapping.md",
+      "gap": "No catalogue skill maps agents into departments or flags overlapping jobs. usage-review, team-bot-links, and export-bot-template do not do this."
+    },
+    {
+      "priority": 3,
+      "id": "safe-agent-retirement",
+      "proposed_name": "safe-agent-retirement",
+      "title": "Safe agent retirement and handover",
+      "kind": "original-to-author",
+      "status": "PROPOSED",
+      "install_state": "NOT_INSTALLED",
+      "effort": "Medium",
+      "file": "recommendations/03-safe-agent-retirement.md",
+      "gap": "export-bot-template shares a bot; routines change jobs. Neither is a decommissioning and handover runbook with an explicit-yes gate."
+    },
+    {
+      "priority": 4,
+      "id": "external-skill-provenance-review",
+      "proposed_name": "external-skill-provenance-review",
+      "title": "External skill provenance and security review",
+      "kind": "original-to-author",
+      "status": "PROPOSED",
+      "install_state": "NOT_INSTALLED",
+      "effort": "Medium",
+      "file": "recommendations/04-external-skill-provenance-review.md",
+      "gap": "skill-authoring manages user-created skills; it is not a pre-install provenance, licence, and instruction review of third-party skills."
+    },
+    {
+      "priority": 5,
+      "id": "fleet-privacy-permission-review",
+      "proposed_name": "fleet-privacy-permission-review",
+      "title": "Fleet privacy and permission review",
+      "kind": "original-to-author",
+      "status": "PROPOSED",
+      "install_state": "NOT_INSTALLED",
+      "effort": "Medium",
+      "file": "recommendations/05-fleet-privacy-permission-review.md",
+      "gap": "Sign-in and send-time skills are not a periodic least-privilege review of fleet connectors. This is not legal advice."
+    },
+    {
+      "priority": 6,
+      "id": "work-evidence-pack",
+      "proposed_name": "work-evidence-pack",
+      "title": "Work evidence pack for evaluation",
+      "kind": "original-to-author",
+      "status": "PROPOSED",
+      "install_state": "NOT_INSTALLED",
+      "effort": "Small to medium",
+      "file": "recommendations/06-work-evidence-pack.md",
+      "gap": "pstack show-me-your-work is a coding decision trail, not a redacted shareable evidence pack for evaluation."
+    }
+  ]
+}

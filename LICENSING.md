@@ -35,7 +35,11 @@ Treated as product-managed recipes, not as user-owned files. Catalogue only.
 
 ## Custom skills
 
-None were present in the shared library, so no custom-skill licence is recorded.
+None were present in the shared library, so no custom-skill licence is recorded. Proposed skills in [RECOMMENDATIONS.md](RECOMMENDATIONS.md) are not yet authored here; no licence choice is made for them in this pass.
+
+## External example repositories
+
+When citing third-party skill collections (for example [`anthropics/skills`](https://github.com/anthropics/skills)), **licences may vary by folder**. Review individual terms before reuse. Do not assume a single licence covers an entire upstream repository, and do not add a blanket copyright licence for third-party material in this repository.
 
 ## Catalogue vs installation
 
