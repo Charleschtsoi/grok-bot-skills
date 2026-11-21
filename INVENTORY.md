@@ -75,7 +75,7 @@ Mentions of the same words as ordinary language, or as nicknames for routines (f
 
 - Skill recipe bodies (managed or plugin)
 - Agent personas, transcripts, routines definitions, or internal IDs
-- Research suggestions for new skills (planned for a later pass, after this draft is in the repo)
+- Installed custom skills (still none). Research suggestions for new skills are tracked separately in [RECOMMENDATIONS.md](RECOMMENDATIONS.md) as `PROPOSED` / `NOT_INSTALLED` only
 
 ## Limitations
 
@@ -90,15 +90,21 @@ Mentions of the same words as ordinary language, or as nicknames for routines (f
 .
 ├── README.md
 ├── INVENTORY.md
+├── RECOMMENDATIONS.md
+├── SOURCES.md
 ├── LICENSING.md
 ├── PROVENANCE.md
 ├── catalogs/
 │   ├── README.md
 │   ├── manifest.json
+│   ├── recommendations.json
 │   ├── managed-skills.{md,json}
 │   ├── plugin-skills.{md,json}
 │   ├── installed-plugins.{md,json}
 │   └── unregistered-plugin-skill-files.json
+├── recommendations/
+│   ├── README.md
+│   └── 01–06 briefs
 ├── custom-skills/
 │   └── README.md
 └── scripts/

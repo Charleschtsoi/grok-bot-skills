@@ -21,7 +21,11 @@ Inventory timestamp recorded in the archive: **21 Nov 2026, Asia/Hong_Kong (UTC+
 - Managed and plugin skill **bodies** (recipes), for provenance and licensing reasons — catalogue and link only
 - Agent personas, transcripts, routines definitions
 - Secrets, PII, absolute machine paths, internal numeric IDs, personal plans
-- Web research or “recommended new skills” (deferred to a later pass)
+- Live installs, routines, personas, or third-party skill body copies from the recommendations pass
+
+## Recommendations research (follow-on)
+
+A separate public-safe research package (sha256 `999df77985e4763c1b7fa0391e824e49c65c3cd7fdbabee774efcd580421b901`) proposed six original skills. Adapted docs live in [RECOMMENDATIONS.md](RECOMMENDATIONS.md), [SOURCES.md](SOURCES.md), and [recommendations/](recommendations/README.md). All remain `PROPOSED` / `NOT_INSTALLED`.
 
 ## Catalogue is not installation
 

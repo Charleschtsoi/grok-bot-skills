@@ -4,6 +4,7 @@
 Validates:
   - manifest counts against JSON catalogue lengths / uniqueness
   - Vercel overlapping skill names
+  - recommendations.json counts and brief file paths
   - relative Markdown links that target paths inside this repository
 
 Exit code 0 on success, 1 on failure.
@@ -139,6 +140,57 @@ def iter_repo_markdown() -> list[Path]:
     return sorted(paths)
 
 
+def check_recommendations() -> list[str]:
+    errors: list[str] = []
+    path = CATALOGS / "recommendations.json"
+    if not path.exists():
+        return errors
+
+    data = load_json("recommendations.json")
+    recs = data.get("recommendations", [])
+    counts = data.get("counts", {})
+
+    if counts.get("shortlisted") != len(recs):
+        errors.append(
+            f"recommendations counts.shortlisted ({counts.get('shortlisted')!r}) "
+            f"!= recommendations length ({len(recs)})"
+        )
+
+    original = sum(1 for r in recs if r.get("kind") == "original-to-author")
+    if counts.get("original_to_author") != original:
+        errors.append(
+            f"recommendations counts.original_to_author ({counts.get('original_to_author')!r}) "
+            f"!= computed ({original})"
+        )
+
+    install_reuse = sum(1 for r in recs if r.get("kind") == "install-or-reuse")
+    if counts.get("install_or_reuse_external_skill") != install_reuse:
+        errors.append(
+            "recommendations counts.install_or_reuse_external_skill: "
+            f"manifest={counts.get('install_or_reuse_external_skill')!r} computed={install_reuse!r}"
+        )
+
+    for rec in recs:
+        status = rec.get("status")
+        install_state = rec.get("install_state")
+        if status != "PROPOSED":
+            errors.append(f"recommendation {rec.get('id')!r}: status must be PROPOSED, got {status!r}")
+        if install_state != "NOT_INSTALLED":
+            errors.append(
+                f"recommendation {rec.get('id')!r}: install_state must be NOT_INSTALLED, "
+                f"got {install_state!r}"
+            )
+        rel = rec.get("file")
+        if not rel:
+            errors.append(f"recommendation {rec.get('id')!r}: missing file")
+            continue
+        brief = ROOT / rel
+        if not brief.is_file():
+            errors.append(f"recommendation {rec.get('id')!r}: missing brief {rel}")
+
+    return errors
+
+
 def check_relative_links() -> list[str]:
     errors: list[str] = []
     for md_path in iter_repo_markdown():
@@ -176,12 +228,14 @@ def main() -> None:
     errors: list[str] = []
     errors.extend(check_counts(manifest, managed, plugins, installed, unregistered))
     errors.extend(check_markdown_tables())
+    errors.extend(check_recommendations())
     errors.extend(check_relative_links())
 
     if errors:
         fail(errors)
 
-    print("OK: catalogue counts, duplicates/overlaps, and relative links validated")
+    recommendations = load_json("recommendations.json") if (CATALOGS / "recommendations.json").exists() else {}
+    print("OK: catalogue counts, recommendations, duplicates/overlaps, and relative links validated")
     print(
         "counts:",
         json.dumps(
@@ -194,6 +248,7 @@ def main() -> None:
                 ),
                 "installed_plugins": len(installed),
                 "unregistered_skill_md": len(unregistered),
+                "recommendations_shortlisted": len(recommendations.get("recommendations", [])),
             },
             sort_keys=True,
         ),

@@ -18,17 +18,32 @@ Cloning or browsing this repo does **not** install skills into any agent. Skills
 
 Skills are **globally shared** across agents. “Available” means the live catalogue listed the skill at inventory time. “Evidenced” means a persona or local chat index referred to it as a skill — that evidence is narrow and is **not** full usage history. Do not treat availability as ownership or as proof of use.
 
-Suggested additions and research recommendations are **out of scope** for this draft and will come in a later pass.
+## Proposed additions (research only)
+
+Six original skills are **proposed** to fill fleet-governance gaps. All are `PROPOSED` / `NOT_INSTALLED` — documentation for later authoring, not executable skills and not live installs. See [RECOMMENDATIONS.md](RECOMMENDATIONS.md).
+
+| Priority | Proposed skill |
+|---:|---|
+| 1 | Outbound approval review |
+| 2 | Agent department mapping |
+| 3 | Safe agent retirement |
+| 4 | External skill provenance review |
+| 5 | Fleet privacy / permission review |
+| 6 | Work evidence pack |
 
 ## Docs
 
 | Document | Purpose |
 |---|---|
 | [INVENTORY.md](INVENTORY.md) | Human-readable inventory, counts, evidenced-use notes, limitations |
+| [RECOMMENDATIONS.md](RECOMMENDATIONS.md) | Shortlist of proposed original skills (not installed) |
+| [SOURCES.md](SOURCES.md) | Research sources, unverified URLs, extraction limitations |
+| [recommendations/](recommendations/README.md) | One brief per proposed skill |
 | [LICENSING.md](LICENSING.md) | Redistribution policy and per-plugin licence pointers from local install metadata |
 | [PROVENANCE.md](PROVENANCE.md) | Source of the draft, what was scanned, what was intentionally omitted |
 | [catalogs/README.md](catalogs/README.md) | Index of catalogue files |
 | [catalogs/manifest.json](catalogs/manifest.json) | Machine-readable summary counts and overlap lists |
+| [catalogs/recommendations.json](catalogs/recommendations.json) | Machine-readable recommendations index |
 | [catalogs/managed-skills.md](catalogs/managed-skills.md) | Managed platform skill catalogue |
 | [catalogs/plugin-skills.md](catalogs/plugin-skills.md) | Plugin skill catalogue |
 | [catalogs/installed-plugins.md](catalogs/installed-plugins.md) | Installed plugins and upstream links |
@@ -36,7 +51,7 @@ Suggested additions and research recommendations are **out of scope** for this d
 
 ## Validation
 
-Run a lightweight check that catalogue counts, Vercel name overlaps, and relative Markdown links stay consistent:
+Run a lightweight check that catalogue counts, recommendation briefs, Vercel name overlaps, and relative Markdown links stay consistent:
 
 ```bash
 python3 scripts/validate_catalog.py
