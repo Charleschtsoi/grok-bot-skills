@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "generated_at": "21 Nov 2026, Asia/Hong_Kong (UTC+8)",
+  "intended_repository": "https://github.com/Charleschtsoi/grok-skills",
+  "package_type": "public-safe draft inventory (no skill bodies, no private paths or IDs)",
+  "source_archive_sha256": "6b6a002e411ce1280d5ab546518237b0b83f62a619f633ae009855687be12434",
+  "catalogue_is_not_an_installer": true,
+  "counts": {
+    "custom_skills": 0,
+    "managed_platform_skills": 71,
+    "plugin_skill_entries": 210,
+    "plugin_skill_unique_names": 191,
+    "vercel_overlapping_skill_names": 19,
+    "installed_plugins": 18,
+    "installed_plugins_with_skills": 14,
+    "installed_plugins_without_skills": 4,
+    "unregistered_skill_md_inside_plugin_installs": 39,
+    "custom_skill_files_shipped": 0
+  },
+  "categories": {
+    "custom": "User-authored reusable skills. None found in the shared library at inventory time.",
+    "managed": "Platform-managed Grok Bot skills. Names and descriptions only; bodies omitted.",
+    "plugin": "Skills from installed plugins. Names, descriptions, origin, and licence metadata only; bodies omitted. Link upstream rather than copy."
+  },
+  "available_vs_evidenced": {
+    "available": "Registered in the live managed or plugin skill catalogue (globally shared across the fleet).",
+    "evidenced_use": [
+      {
+        "skill": "code-changes",
+        "kind": "managed",
+        "basis": "Instructed by name in one agent persona"
+      },
+      {
+        "skill": "routines",
+        "kind": "managed",
+        "basis": "Instructed by name in one agent persona; also appears as “routines skill” in fleet chats"
+      },
+      {
+        "skill": "poteto-mode",
+        "kind": "plugin",
+        "plugin": "pstack",
+        "basis": "Referenced as the coding-bot standard in a bot-design persona"
+      },
+      {
+        "skill": "scheduling",
+        "kind": "managed",
+        "basis": "“scheduling skill” appears in fleet chats"
+      },
+      {
+        "skill": "flight-booking",
+        "kind": "managed",
+        "basis": "“flight-booking skill” appears in fleet chats"
+      },
+      {
+        "skill": "canvas",
+        "kind": "runtime-catalog-only",
+        "basis": "Chats mention loading canvas; no local body was found in this inventory"
+      },
+      {
+        "skill": "pstack",
+        "kind": "plugin (name refers to the plugin / setup)",
+        "basis": "“pstack skill” appears in fleet chats"
+      }
+    ],
+    "note": "Most catalogued skills are available but were not evidenced in personas or in this local chat index. Mentions of ordinary English or routine nicknames (for example job-search as a domain) were not counted as skill use."
+  },
+  "licensing_policy_this_draft": "Catalogue and link only. Do not vendor third-party or platform skill bodies in this repository unless a later pass records an explicit, per-work licence decision.",
+  "vercel_overlapping_names": [
+    "ai-gateway",
+    "ai-sdk",
+    "auth",
+    "bootstrap",
+    "chat-sdk",
+    "deployments-cicd",
+    "env-vars",
+    "knowledge-update",
+    "marketplace",
+    "react-best-practices",
+    "routing-middleware",
+    "runtime-cache",
+    "vercel-agent",
+    "vercel-cli",
+    "vercel-functions",
+    "vercel-sandbox",
+    "vercel-storage",
+    "verification",
+    "workflow"
+  ],
+  "runtime_names_without_local_body": [
+    "canvas",
+    "consumer-pages"
+  ]
+}
