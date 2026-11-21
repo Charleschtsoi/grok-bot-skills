@@ -1,8 +1,10 @@
 # Provenance and source notes
 
-## What this draft is
+## What this repository is
 
-A **public-safe consolidation** of a read-only inventory of skills available to Charlie’s Grok Bot fleet, prepared for [github.com/Charleschtsoi/grok-skills](https://github.com/Charleschtsoi/grok-skills).
+A **public-safe consolidation** of a read-only inventory of skills available to Charlie’s Grok Bot fleet, plus a community contribution path, prepared for [github.com/Charleschtsoi/grok-skills](https://github.com/Charleschtsoi/grok-skills).
+
+The community-hub layer (README quick starts, [CONTRIBUTING.md](CONTRIBUTING.md), templates, issue/PR forms, MIT for repository-original material) does not change the inventory facts: catalogue references remain non-installing, and original installable skills under `custom-skills/` remain zero until someone contributes and merges a real recipe.
 
 The catalogues in [`catalogs/`](catalogs/manifest.json) were produced from a local scan and packaged as a public-safe archive (sha256 `6b6a002e411ce1280d5ab546518237b0b83f62a619f633ae009855687be12434`). This repository draft uses that archive. It does **not** re-fetch private bot files, personas, transcripts, or live profiles.
 

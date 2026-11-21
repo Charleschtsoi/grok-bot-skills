@@ -1,0 +1,59 @@
+name: Propose a skill
+description: Suggest an original skill others could reuse (discussion before a full PR).
+title: "Propose skill: "
+labels: ["skill-proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing ideas. Proposals should be **generic** and safe to discuss in public.
+        Cloning this repo does **not** install skills. See [CONTRIBUTING.md](https://github.com/Charleschtsoi/grok-skills/blob/main/CONTRIBUTING.md).
+  - type: input
+    id: proposed-name
+    attributes:
+      label: Proposed skill name
+      description: Lowercase hyphenated name (for example outbound-approval-review).
+      placeholder: my-useful-skill
+    validations:
+      required: true
+  - type: textarea
+    id: when-to-use
+    attributes:
+      label: When to use
+      description: One or two sentences describing when an agent should load this skill.
+    validations:
+      required: true
+  - type: textarea
+    id: gap
+    attributes:
+      label: Gap this fills
+      description: What is missing today (avoid duplicating managed or well-known plugin skills).
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Approval and side-effect boundaries
+      description: What needs an explicit human yes? What must the skill never do?
+    validations:
+      required: true
+  - type: dropdown
+    id: readiness
+    attributes:
+      label: Are you willing to open a PR with a SKILL.md?
+      options:
+        - "Yes, I can draft a PR"
+        - "Not yet — discussion only"
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety checklist
+      options:
+        - label: No secrets, PII, private paths, or internal IDs in this proposal
+          required: true
+        - label: I understand a skill file cannot enforce platform approval gates
+          required: true
+        - label: I will not paste third-party skill bodies; I will link upstream instead
+          required: true
