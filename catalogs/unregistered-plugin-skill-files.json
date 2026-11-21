@@ -1,0 +1,236 @@
+[
+  {
+    "plugin_folder": "vercel",
+    "relative_path": "skills/chat-sdk/upstream/SKILL.md",
+    "name": "upstream",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel",
+    "relative_path": "skills/workflow/upstream/SKILL.md",
+    "name": "upstream",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel",
+    "relative_path": "skills/ai-sdk/upstream/SKILL.md",
+    "name": "upstream",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel",
+    "relative_path": "skills/vercel-cli/upstream/SKILL.md",
+    "name": "upstream",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel",
+    "relative_path": "skills/vercel-sandbox/upstream/SKILL.md",
+    "name": "upstream",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel",
+    "relative_path": "skills/react-best-practices/upstream/SKILL.md",
+    "name": "upstream",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel",
+    "relative_path": "skills/is-agentic/upstream/SKILL.md",
+    "name": "upstream",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel",
+    "relative_path": "skills/eve/upstream/SKILL.md",
+    "name": "upstream",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel",
+    "relative_path": "skills/flags-sdk/upstream/SKILL.md",
+    "name": "upstream",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel",
+    "relative_path": ".claude/skills/release/SKILL.md",
+    "name": "release",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel",
+    "relative_path": ".claude/skills/benchmark-agents/SKILL.md",
+    "name": "benchmark-agents",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel",
+    "relative_path": ".claude/skills/benchmark-sandbox/SKILL.md",
+    "name": "benchmark-sandbox",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel",
+    "relative_path": ".claude/skills/benchmark-testing/SKILL.md",
+    "name": "benchmark-testing",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel",
+    "relative_path": ".claude/skills/benchmark-e2e/SKILL.md",
+    "name": "benchmark-e2e",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel",
+    "relative_path": ".claude/skills/vercel-plugin-eval/SKILL.md",
+    "name": "vercel-plugin-eval",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel",
+    "relative_path": ".claude/skills/plugin-audit/SKILL.md",
+    "name": "plugin-audit",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "figma",
+    "relative_path": "workflow-skills/generate-project-plan/SKILL.md",
+    "name": "generate-project-plan",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "figma",
+    "relative_path": "workflow-skills/video-interaction-mapper/SKILL.md",
+    "name": "video-interaction-mapper",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "huggingface-skills",
+    "relative_path": "hf-mcp/skills/hf-mcp/SKILL.md",
+    "name": "hf-mcp",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "pstack",
+    "relative_path": "automations/benny/skills/setup-benny/SKILL.md",
+    "name": "setup-benny",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "pstack",
+    "relative_path": "automations/benny/skills/reproduce-and-fix-issues/SKILL.md",
+    "name": "reproduce-and-fix-issues",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "pstack",
+    "relative_path": "automations/benny/skills/triage-issue-reports/SKILL.md",
+    "name": "triage-issue-reports",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel-plugin",
+    "relative_path": "skills/chat-sdk/upstream/SKILL.md",
+    "name": "upstream",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel-plugin",
+    "relative_path": "skills/next-upgrade/upstream/SKILL.md",
+    "name": "upstream",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel-plugin",
+    "relative_path": "skills/nextjs/upstream/SKILL.md",
+    "name": "upstream",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel-plugin",
+    "relative_path": "skills/workflow/upstream/SKILL.md",
+    "name": "upstream",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel-plugin",
+    "relative_path": "skills/ai-sdk/upstream/SKILL.md",
+    "name": "upstream",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel-plugin",
+    "relative_path": "skills/next-cache-components/upstream/SKILL.md",
+    "name": "upstream",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel-plugin",
+    "relative_path": "skills/vercel-cli/upstream/SKILL.md",
+    "name": "upstream",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel-plugin",
+    "relative_path": "skills/vercel-sandbox/upstream/SKILL.md",
+    "name": "upstream",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel-plugin",
+    "relative_path": "skills/react-best-practices/upstream/SKILL.md",
+    "name": "upstream",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel-plugin",
+    "relative_path": "skills/next-forge/upstream/SKILL.md",
+    "name": "upstream",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel-plugin",
+    "relative_path": ".claude/skills/release/SKILL.md",
+    "name": "release",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel-plugin",
+    "relative_path": ".claude/skills/benchmark-agents/SKILL.md",
+    "name": "benchmark-agents",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel-plugin",
+    "relative_path": ".claude/skills/benchmark-sandbox/SKILL.md",
+    "name": "benchmark-sandbox",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel-plugin",
+    "relative_path": ".claude/skills/benchmark-testing/SKILL.md",
+    "name": "benchmark-testing",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel-plugin",
+    "relative_path": ".claude/skills/benchmark-e2e/SKILL.md",
+    "name": "benchmark-e2e",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel-plugin",
+    "relative_path": ".claude/skills/vercel-plugin-eval/SKILL.md",
+    "name": "vercel-plugin-eval",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  },
+  {
+    "plugin_folder": "vercel-plugin",
+    "relative_path": ".claude/skills/plugin-audit/SKILL.md",
+    "name": "plugin-audit",
+    "note": "Present as SKILL.md inside the plugin install cache but not registered in the live plugin-skills catalog, so not treated as available to agents."
+  }
+]

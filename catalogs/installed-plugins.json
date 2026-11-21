@@ -1,0 +1,345 @@
+[
+  {
+    "plugin_folder": "notion-workspace",
+    "display_name": "notion-workspace",
+    "version": "0.1.0",
+    "marketplace_cache": "cursor-public",
+    "registered_skill_count": 14,
+    "license_declared": null,
+    "license_file_detected": null,
+    "repository": null,
+    "homepage": null,
+    "author": {
+      "name": "Notion Labs"
+    },
+    "description": "Notion Skills + Notion MCP server packaged as a Cursor plugin.",
+    "license_notes": "No license field in plugin.json and no LICENSE file in the install. README describes an official Cursor plugin and gives the marketplace/GitHub install id makenotion/cursor-notion-plugin. License is unverified from local files. Do not redistribute skill bodies.",
+    "readme_install_source": "makenotion/cursor-notion-plugin",
+    "redistribute_skill_bodies": false,
+    "redistribution_reason": "Third-party plugin skills are catalogued only. Link upstream; do not copy bodies into this repo without a later, explicit licence decision."
+  },
+  {
+    "plugin_folder": "vercel",
+    "display_name": "vercel",
+    "version": "0.53.0",
+    "marketplace_cache": "cursor-public",
+    "registered_skill_count": 33,
+    "license_declared": "Apache-2.0",
+    "license_file_detected": "Apache-2.0",
+    "repository": "https://github.com/vercel/vercel-plugin",
+    "homepage": "https://vercel.com",
+    "author": {
+      "name": "Vercel"
+    },
+    "description": "Build and deploy web apps and agents",
+    "license_notes": null,
+    "readme_install_source": null,
+    "redistribute_skill_bodies": false,
+    "redistribution_reason": "Third-party plugin skills are catalogued only. Link upstream; do not copy bodies into this repo without a later, explicit licence decision."
+  },
+  {
+    "plugin_folder": "figma",
+    "display_name": "Figma",
+    "version": "2.2.211",
+    "marketplace_cache": "cursor-public",
+    "registered_skill_count": 17,
+    "license_declared": null,
+    "license_file_detected": null,
+    "repository": "https://github.com/figma/mcp-server-guide",
+    "homepage": "https://github.com/figma/mcp-server-guide",
+    "author": {
+      "name": "Figma"
+    },
+    "description": "Plugin that includes the Figma MCP server and Skills for common workflows",
+    "license_notes": "No OSI license in plugin.json or a LICENSE file. README states that use of the Figma MCP server and related resources (including these skills) is subject to the Figma Developer Terms (https://www.figma.com/legal/developer-terms/). Do not redistribute skill bodies.",
+    "readme_install_source": null,
+    "redistribute_skill_bodies": false,
+    "redistribution_reason": "Third-party plugin skills are catalogued only. Link upstream; do not copy bodies into this repo without a later, explicit licence decision."
+  },
+  {
+    "plugin_folder": "parallel",
+    "display_name": "Parallel",
+    "version": "0.2.1",
+    "marketplace_cache": "cursor-public",
+    "registered_skill_count": 6,
+    "license_declared": "MIT",
+    "license_file_detected": "MIT",
+    "repository": "https://github.com/parallel-web/parallel-cursor-plugin",
+    "homepage": "https://docs.parallel.ai/home",
+    "author": {
+      "name": "Parallel Web Systems"
+    },
+    "description": "Web search, content extraction, deep research, data enrichment, entity discovery (FindAll), and web monitoring — powered by parallel-cli.",
+    "license_notes": null,
+    "readme_install_source": null,
+    "redistribute_skill_bodies": false,
+    "redistribution_reason": "Third-party plugin skills are catalogued only. Link upstream; do not copy bodies into this repo without a later, explicit licence decision."
+  },
+  {
+    "plugin_folder": "huggingface-skills",
+    "display_name": "huggingface-skills",
+    "version": "1.0.8",
+    "marketplace_cache": "cursor-public",
+    "registered_skill_count": 18,
+    "license_declared": "Apache-2.0",
+    "license_file_detected": "Apache-2.0",
+    "repository": "https://github.com/huggingface/skills",
+    "homepage": "https://github.com/huggingface/skills",
+    "author": {
+      "name": "Hugging Face"
+    },
+    "description": "Agent Skills for AI/ML tasks including dataset creation, model training, evaluation, and research paper publishing on Hugging Face Hub",
+    "license_notes": null,
+    "readme_install_source": null,
+    "redistribute_skill_bodies": false,
+    "redistribution_reason": "Third-party plugin skills are catalogued only. Link upstream; do not copy bodies into this repo without a later, explicit licence decision."
+  },
+  {
+    "plugin_folder": "firecrawl",
+    "display_name": "Firecrawl",
+    "version": "0.12.0",
+    "marketplace_cache": "cursor-public",
+    "registered_skill_count": 19,
+    "license_declared": "MIT",
+    "license_file_detected": "MIT",
+    "repository": "https://github.com/firecrawl/firecrawl-cursor-plugin",
+    "homepage": "https://firecrawl.dev",
+    "author": {
+      "name": "Firecrawl"
+    },
+    "description": "The context API for AI agents. Search the live web, scrape any page into clean Markdown or structured data, and interact with dynamic pages, plus crawl, map, monitor, and Alexandria data providers. Runs on the hosted Firecrawl MCP server with browser sign-in, no API key to paste.",
+    "license_notes": null,
+    "readme_install_source": null,
+    "redistribute_skill_bodies": false,
+    "redistribution_reason": "Third-party plugin skills are catalogued only. Link upstream; do not copy bodies into this repo without a later, explicit licence decision."
+  },
+  {
+    "plugin_folder": "datadog",
+    "display_name": "datadog",
+    "version": "0.7.19",
+    "marketplace_cache": "cursor-public",
+    "registered_skill_count": 4,
+    "license_declared": null,
+    "license_file_detected": "Apache-2.0",
+    "repository": "https://github.com/datadog-labs/cursor-plugin.git",
+    "homepage": null,
+    "author": {
+      "name": "Datadog"
+    },
+    "description": "Use Datadog directly in Cursor through a preconfigured Datadog MCP server. Query logs, metrics, traces, dashboards, and more through natural conversation. This plugin is in preview.",
+    "license_notes": "No license field in plugin.json; LICENSE file is Apache License 2.0; NOTICE names Datadog, Inc.",
+    "readme_install_source": null,
+    "redistribute_skill_bodies": false,
+    "redistribution_reason": "Third-party plugin skills are catalogued only. Link upstream; do not copy bodies into this repo without a later, explicit licence decision."
+  },
+  {
+    "plugin_folder": "cloudinary",
+    "display_name": "Cloudinary",
+    "version": "1.1.1",
+    "marketplace_cache": "cursor-public",
+    "registered_skill_count": 2,
+    "license_declared": "MIT",
+    "license_file_detected": null,
+    "repository": "https://github.com/cloudinary-devs/cloudinary-plugin",
+    "homepage": "https://cloudinary.com",
+    "author": {
+      "name": "Cloudinary"
+    },
+    "description": "Use Cloudinary directly in Cursor. Upload, manage, optimize, and transform images and videos at scale using natural language.",
+    "license_notes": "MIT declared in plugin.json; no LICENSE file found in the install root.",
+    "readme_install_source": null,
+    "redistribute_skill_bodies": false,
+    "redistribution_reason": "Third-party plugin skills are catalogued only. Link upstream; do not copy bodies into this repo without a later, explicit licence decision."
+  },
+  {
+    "plugin_folder": "pstack",
+    "display_name": "pstack",
+    "version": "0.15.46",
+    "marketplace_cache": "cursor-public",
+    "registered_skill_count": 58,
+    "license_declared": "MIT",
+    "license_file_detected": "MIT",
+    "repository": "https://github.com/cursor/plugins",
+    "homepage": "https://github.com/cursor/plugins/tree/main/pstack",
+    "author": {
+      "name": "Lauren Tan"
+    },
+    "description": "if you want to go fast, go deep first. pstack helps you write less, but higher quality code. rigorous agent workflows you can parallelize with confidence.",
+    "license_notes": null,
+    "readme_install_source": null,
+    "redistribute_skill_bodies": false,
+    "redistribution_reason": "Third-party plugin skills are catalogued only. Link upstream; do not copy bodies into this repo without a later, explicit licence decision."
+  },
+  {
+    "plugin_folder": "vercel-plugin",
+    "display_name": "vercel",
+    "version": "0.40.0",
+    "marketplace_cache": "vercel",
+    "registered_skill_count": 25,
+    "license_declared": "Apache-2.0",
+    "license_file_detected": null,
+    "repository": "https://github.com/vercel/vercel-plugin",
+    "homepage": "https://vercel.com",
+    "author": {
+      "name": "Vercel"
+    },
+    "description": "Build and deploy web apps and agents",
+    "license_notes": "Apache-2.0 declared in plugin.json; no LICENSE file found in this install root (the cursor-public/vercel install of the same upstream does include an Apache-2.0 LICENSE file).",
+    "readme_install_source": null,
+    "redistribute_skill_bodies": false,
+    "redistribution_reason": "Third-party plugin skills are catalogued only. Link upstream; do not copy bodies into this repo without a later, explicit licence decision."
+  },
+  {
+    "plugin_folder": "gmail",
+    "display_name": "Gmail",
+    "version": "1.0.0",
+    "marketplace_cache": "cursor-public",
+    "registered_skill_count": 0,
+    "license_declared": "MIT",
+    "license_file_detected": "MIT",
+    "repository": "https://github.com/cursor/plugins",
+    "homepage": "https://github.com/cursor/plugins/tree/main/third_party/gmail",
+    "author": {
+      "name": "Cursor"
+    },
+    "description": "Search, read, draft, and manage email.",
+    "license_notes": null,
+    "readme_install_source": null,
+    "redistribute_skill_bodies": false,
+    "redistribution_reason": "Third-party plugin skills are catalogued only. Link upstream; do not copy bodies into this repo without a later, explicit licence decision."
+  },
+  {
+    "plugin_folder": "google-calendar",
+    "display_name": "Google Calendar",
+    "version": "1.0.0",
+    "marketplace_cache": "cursor-public",
+    "registered_skill_count": 0,
+    "license_declared": "MIT",
+    "license_file_detected": "MIT",
+    "repository": "https://github.com/cursor/plugins",
+    "homepage": "https://github.com/cursor/plugins/tree/main/third_party/google-calendar",
+    "author": {
+      "name": "Cursor"
+    },
+    "description": "Search events and schedule meetings.",
+    "license_notes": null,
+    "readme_install_source": null,
+    "redistribute_skill_bodies": false,
+    "redistribution_reason": "Third-party plugin skills are catalogued only. Link upstream; do not copy bodies into this repo without a later, explicit licence decision."
+  },
+  {
+    "plugin_folder": "google-docs",
+    "display_name": "Google Docs",
+    "version": "1.1.0",
+    "marketplace_cache": "cursor-public",
+    "registered_skill_count": 1,
+    "license_declared": "MIT",
+    "license_file_detected": "MIT",
+    "repository": "https://github.com/cursor/plugins",
+    "homepage": "https://github.com/cursor/plugins/tree/main/third_party/google-docs",
+    "author": {
+      "name": "Cursor"
+    },
+    "description": "Read, create, and edit documents.",
+    "license_notes": null,
+    "readme_install_source": null,
+    "redistribute_skill_bodies": false,
+    "redistribution_reason": "Third-party plugin skills are catalogued only. Link upstream; do not copy bodies into this repo without a later, explicit licence decision."
+  },
+  {
+    "plugin_folder": "google-drive",
+    "display_name": "Google Drive",
+    "version": "1.0.1",
+    "marketplace_cache": "cursor-public",
+    "registered_skill_count": 1,
+    "license_declared": "MIT",
+    "license_file_detected": "MIT",
+    "repository": "https://github.com/cursor/plugins",
+    "homepage": "https://github.com/cursor/plugins/tree/main/third_party/google-drive",
+    "author": {
+      "name": "Cursor"
+    },
+    "description": "Search, read, create, and share files.",
+    "license_notes": null,
+    "readme_install_source": null,
+    "redistribute_skill_bodies": false,
+    "redistribution_reason": "Third-party plugin skills are catalogued only. Link upstream; do not copy bodies into this repo without a later, explicit licence decision."
+  },
+  {
+    "plugin_folder": "google-slides",
+    "display_name": "Google Slides",
+    "version": "1.1.0",
+    "marketplace_cache": "cursor-public",
+    "registered_skill_count": 1,
+    "license_declared": "MIT",
+    "license_file_detected": "MIT",
+    "repository": "https://github.com/cursor/plugins",
+    "homepage": "https://github.com/cursor/plugins/tree/main/third_party/google-slides",
+    "author": {
+      "name": "Cursor"
+    },
+    "description": "Create, edit, and render presentations.",
+    "license_notes": null,
+    "readme_install_source": null,
+    "redistribute_skill_bodies": false,
+    "redistribution_reason": "Third-party plugin skills are catalogued only. Link upstream; do not copy bodies into this repo without a later, explicit licence decision."
+  },
+  {
+    "plugin_folder": "context-dev",
+    "display_name": "Context.dev",
+    "version": "2.1.0",
+    "marketplace_cache": "cursor-public",
+    "registered_skill_count": 11,
+    "license_declared": "MIT",
+    "license_file_detected": "MIT",
+    "repository": "https://github.com/context-dot-dev/cursor-plugin",
+    "homepage": "https://context.dev",
+    "author": {
+      "name": "Context.dev"
+    },
+    "description": "Search, scrape, crawl, extract, parse, monitor, and process the live web with Context.dev.",
+    "license_notes": null,
+    "readme_install_source": null,
+    "redistribute_skill_bodies": false,
+    "redistribution_reason": "Third-party plugin skills are catalogued only. Link upstream; do not copy bodies into this repo without a later, explicit licence decision."
+  },
+  {
+    "plugin_folder": "outlook",
+    "display_name": "Outlook",
+    "version": "1.0.0",
+    "marketplace_cache": "cursor-public",
+    "registered_skill_count": 0,
+    "license_declared": "MIT",
+    "license_file_detected": "MIT",
+    "repository": "https://github.com/cursor/plugins",
+    "homepage": "https://github.com/cursor/plugins/tree/main/third_party/outlook",
+    "author": {
+      "name": "Cursor"
+    },
+    "description": "Search, read, and send Microsoft Outlook email, and look up contacts.",
+    "license_notes": null,
+    "readme_install_source": null,
+    "redistribute_skill_bodies": false,
+    "redistribution_reason": "Third-party plugin skills are catalogued only. Link upstream; do not copy bodies into this repo without a later, explicit licence decision."
+  },
+  {
+    "plugin_folder": "finance",
+    "display_name": "Finance",
+    "version": "1.1.2",
+    "marketplace_cache": "cursor-public",
+    "registered_skill_count": 0,
+    "license_declared": "MIT",
+    "license_file_detected": "MIT",
+    "repository": "https://github.com/cursor/plugins",
+    "homepage": "https://grok.com/connectors",
+    "author": {
+      "name": "Cursor"
+    },
+    "description": "Cursor Finance connector (Plaid) for balances, spending, subscriptions, and investments. Installed as a connector; it registers no skills.",
+    "license_notes": null,
+    "readme_install_source": null,
+    "redistribute_skill_bodies": false,
+    "redistribution_reason": "Third-party plugin skills are catalogued only. Link upstream; do not copy bodies into this repo without a later, explicit licence decision.",
+    "description_note": "Official plugin.json description was shortened in the public package; it is a vendor connector blurb, not account data."
+  }
+]
